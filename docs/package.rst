@@ -10,10 +10,10 @@ Package
 .. code-block:: python
 
    # Подключаем модуль
-   from proxies_taster import Protocol
-   from proxies_taster import ProxyDict
-   from proxies_taster import ProxiesTaster
-   from proxies_taster.events_data import Events
+   from ptaster import Protocol
+   from ptaster import ProxyDict
+   from ptaster import ProxiesTaster
+   from ptaster.events_data import Events
 
    # Список прокси
    proxies = [
@@ -28,7 +28,7 @@ Package
         'socks5://184.95.235.194:1080',
 
         # Или за счет использования объекта
-        # proxies_taster.ProxyDict
+        # ptaster.ProxyDict
         ProxyDict(
             protocol = Protocol.SOCKS4,
             proxy = '125.141.139.112:5566'
