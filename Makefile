@@ -1,39 +1,13 @@
 # Файл для установки, компиляции и т.д. скрипта
 
-SCRIPT = proxies-taster
-DESTDIR = /opt/proxies-taster
-LIBDIR = ${DESTDIR}
-
-LINKPATH = /usr/local/bin/${SCRIPT}
-
 install:
-	@if [ -f "${LINKPATH}" ]; then \
-	    echo 'ProxiesTaster already installed'; \
-	else \
-	    pip install proxies-taster colorama tqdm --break-system-packages; \
-	    sudo install -D -t ${LIBDIR} proxies_parser_logger.py; \
-	    sudo install -D -t ${DESTDIR} proxies-taster; \
-	    sudo ln -s "${DESTDIR}/${SCRIPT}" "${LINKPATH}"; \
-	fi;
+	pip install ptaster colorama tqdm --break-system-packages;
 install-dev:
 	@python -m venv .; \
 	source bin/activate; \
-	pip install -r requirements.txt --break-system-packages; \
-
-	@if ! [ `stat -c %a "${SCRIPT}"` -eq 755 ]; then \
-	    sudo chmod ugo+x "${SCRIPT}"; \
-	else \
-	    echo "${SCRIPT} script already has all execute permission"; \
-	fi;
+	pip install -r requirements.txt --break-system-packages;
 uninstall:
-	@if [ ! -f "${LINKPATH}" ]; then \
-	    echo 'ProxiesTaster already dont installed'; \
-	else \
-	    pip uninstall proxies-taster -y --break-system-packages; \
-	    sudo rm -f "${LINKPATH}"; \
-	    sudo rm -f "${DESTDIR}/${SCRIPT}"; \
-	    sudo rm -f "${LIBDIR}/proxies_parser_logger.py"; \
-	fi;
+	pip uninstall ptaster -y --break-system-packages;
 update:
 	make uninstall && make install
 update-dev:
