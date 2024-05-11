@@ -8,17 +8,12 @@ asyncio
 переданный список прокси
 
 **Установка**
-
-Для установки необходимо скопировать репозиторий
-на ваш компьютер `git clone https://www.github.com/ThwWhatis/ProxiesTaster`,
-далее перейти в директорию, куда установлен скрипт и запустить `make install`
-
-Для удаления достаточно запустить `make uninstall`
+`pip install ptaster`
 
 **Список аргументов:**
 
 ```default
-usage: proxies-taster [-h] [--out OUT] [--append APPEND] [--workers WORKERS]
+usage: ptaster [-h] [--out OUT] [--append APPEND] [--workers WORKERS]
                        [--protocols PROTOCOLS [PROTOCOLS ...]] [--countries COUNTRIES [COUNTRIES ...]]
                        [--status-codes STATUS_CODES [STATUS_CODES ...]] [--logconfig LOGCONFIG]
                        [--logdir LOGDIR] [--loglevel LOGLEVEL] [--logformat LOGFORMAT] [--verbose]
@@ -60,18 +55,18 @@ usage: proxies-taster [-h] [--out OUT] [--append APPEND] [--workers WORKERS]
 С простой передачей прокси:
 
 ```default
-proxies-taster '72.195.34.59:4145 43.248.27.8:4646' --verbose --out valid.txt
-proxies-taster 72.195.34.59:4145,43.248.27.8:4646 --verbose --out valid.txt
+python -m ptaster '72.195.34.59:4145 43.248.27.8:4646' --verbose --out valid.txt
+python -m ptaster 72.195.34.59:4145,43.248.27.8:4646 --verbose --out valid.txt
 ```
 
 Прокси из файла .txt:
 
 ```default
-proxies-taster proxies.txt --verbose --append valid.txt
+python -m ptaster proxies.txt --verbose --append valid.txt
 ```
 
 Или с помощью pipe:
 
 ```default
-cat proxies.txt | proxies-taster --verbose --append valid.txt
+cat proxies.txt | python -m ptaster --verbose --append valid.txt
 ```

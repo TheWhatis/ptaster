@@ -3,7 +3,7 @@ Package
 
 **Установка**
 
-``pip install proxies-taster``
+``pip install ptaster``
 
 **Использование**
 

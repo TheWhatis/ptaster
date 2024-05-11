@@ -9,7 +9,7 @@ asyncio
 переданный список прокси
 
 **Установка**
-``pip install proxies-taster``
+``pip install ptaster``
 
 **Список аргументов:**
 

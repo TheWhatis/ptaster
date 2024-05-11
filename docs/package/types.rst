@@ -1,7 +1,7 @@
 Types
 =====
 
-.. automodule:: proxies_taster.types
+.. automodule:: ptaster.types
    :members:
    :undoc-members:
    :show-inheritance:

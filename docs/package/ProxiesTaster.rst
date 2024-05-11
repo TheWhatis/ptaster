@@ -1,7 +1,7 @@
 ProxiesTaster
 =============
 
-.. autoclass:: proxies_taster.ProxiesTaster
+.. autoclass:: ptaster.ProxiesTaster
    :members:
    :undoc-members:
    :show-inheritance:

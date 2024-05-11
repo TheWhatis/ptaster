@@ -36,13 +36,13 @@
   <section id="package">
 <h1>Package<a class="headerlink" href="#package" title="Link to this heading">¶</a></h1>
 <p><strong>Установка</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">proxies-taster</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ptaster</span></code></p>
 <p><strong>Использование</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Подключаем модуль</span>
-<span class="kn">from</span> <span class="nn">proxies_taster</span> <span class="kn">import</span> <span class="n">Protocol</span>
-<span class="kn">from</span> <span class="nn">proxies_taster</span> <span class="kn">import</span> <span class="n">ProxyDict</span>
-<span class="kn">from</span> <span class="nn">proxies_taster</span> <span class="kn">import</span> <span class="n">ProxiesTaster</span>
-<span class="kn">from</span> <span class="nn">proxies_taster.events_data</span> <span class="kn">import</span> <span class="n">Events</span>
+<span class="kn">from</span> <span class="nn">ptaster</span> <span class="kn">import</span> <span class="n">Protocol</span>
+<span class="kn">from</span> <span class="nn">ptaster</span> <span class="kn">import</span> <span class="n">ProxyDict</span>
+<span class="kn">from</span> <span class="nn">ptaster</span> <span class="kn">import</span> <span class="n">ProxiesTaster</span>
+<span class="kn">from</span> <span class="nn">ptaster.events_data</span> <span class="kn">import</span> <span class="n">Events</span>
 
 <span class="c1"># Список прокси</span>
 <span class="n">proxies</span> <span class="o">=</span> <span class="p">[</span>
@@ -57,7 +57,7 @@
      <span class="s1">&#39;socks5://184.95.235.194:1080&#39;</span><span class="p">,</span>
 
      <span class="c1"># Или за счет использования объекта</span>
-     <span class="c1"># proxies_taster.ProxyDict</span>
+     <span class="c1"># ptaster.ProxyDict</span>
      <span class="n">ProxyDict</span><span class="p">(</span>
          <span class="n">protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="o">.</span><span class="n">SOCKS4</span><span class="p">,</span>
          <span class="n">proxy</span> <span class="o">=</span> <span class="s1">&#39;125.141.139.112:5566&#39;</span>
@@ -96,9 +96,31 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="package/ProxiesTaster.html">ProxiesTaster</a></li>
-<li class="toctree-l1"><a class="reference internal" href="package/types.html">Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="package/events_data.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="package/ProxiesTaster.html">ProxiesTaster</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="package/ProxiesTaster.html#ptaster.ProxiesTaster"><code class="docutils literal notranslate"><span class="pre">ProxiesTaster</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="package/types.html">Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="package/types.html#ptaster.types.Protocol"><code class="docutils literal notranslate"><span class="pre">Protocol</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/types.html#ptaster.types.Proxies"><code class="docutils literal notranslate"><span class="pre">Proxies</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/types.html#ptaster.types.ProxyDict"><code class="docutils literal notranslate"><span class="pre">ProxyDict</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/types.html#ptaster.types.WorkedProxy"><code class="docutils literal notranslate"><span class="pre">WorkedProxy</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="package/events_data.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.End"><code class="docutils literal notranslate"><span class="pre">End</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.Events"><code class="docutils literal notranslate"><span class="pre">Events</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.Proxy"><code class="docutils literal notranslate"><span class="pre">Proxy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.ProxyError"><code class="docutils literal notranslate"><span class="pre">ProxyError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.ProxySuccess"><code class="docutils literal notranslate"><span class="pre">ProxySuccess</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.RunEnd"><code class="docutils literal notranslate"><span class="pre">RunEnd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.RunStart"><code class="docutils literal notranslate"><span class="pre">RunStart</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.Start"><code class="docutils literal notranslate"><span class="pre">Start</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="package/events_data.html#ptaster.events_data.Success"><code class="docutils literal notranslate"><span class="pre">Success</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
