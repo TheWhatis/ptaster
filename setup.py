@@ -2,8 +2,8 @@
 from setuptools import setup
 
 
-name = 'proxies-taster'
-version = '1.2.5'
+name = 'ptaster'
+version = '1.0.0'
 
 
 # Long description
@@ -32,18 +32,12 @@ if __name__ == '__main__':
         url=url,
         download_url=f"{url}/dist/{name}-{version}.zip",
 
-        packages=['proxies_taster'],
+        packages=['ptaster'],
         include_package_data=True,
         install_requires=[
             'aiohttp',
             'aiohttp-proxy',
             'fake-useragent',
             'PyEventEmitter'
-        ],
-
-        entry_points={
-            "console_scripts": [
-                'ptaster = proxies_taster.__main__:main'
-            ]
-        }
+        ]
     )
